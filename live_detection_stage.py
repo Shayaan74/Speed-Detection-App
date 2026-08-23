@@ -46,6 +46,7 @@ class LiveDetectionStage(QWidget):
         self.speed_log.setMaximumWidth(250)
 
         self.stop_btn = QPushButton("Stop && Start Over")
+        self.stop_btn.setObjectName("dangerButton")
         self.stop_btn.clicked.connect(self._on_stop_clicked)
 
         video_row = QHBoxLayout()
@@ -57,6 +58,8 @@ class LiveDetectionStage(QWidget):
         video_row.addLayout(log_col, stretch=1)
 
         main_layout = QVBoxLayout(self)
+        main_layout.setContentsMargins(16, 16, 16, 16)
+        main_layout.setSpacing(14)
         main_layout.addLayout(video_row)
         main_layout.addWidget(self.stop_btn)
 

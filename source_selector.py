@@ -53,6 +53,8 @@ class SourceSelector(QWidget):
         self.captured_frame = None
 
         main_layout = QVBoxLayout(self)
+        main_layout.setContentsMargins(20, 20, 20, 20)
+        main_layout.setSpacing(14)
 
         # --- Source type toggle ---
         self.camera_radio = QRadioButton("Camera")
@@ -98,6 +100,7 @@ class SourceSelector(QWidget):
         self.preview_label.setStyleSheet("border: 1px solid gray;")
 
         proceed_btn = QPushButton("Proceed to Calibration")
+        proceed_btn.setObjectName("primaryButton")
         proceed_btn.clicked.connect(self._proceed)
 
         main_layout.addLayout(type_row)

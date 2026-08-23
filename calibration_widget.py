@@ -188,9 +188,11 @@ class CalibrationView(QWidget):
         clear_btn = QPushButton("Clear All Lines")
         clear_btn.clicked.connect(self._clear_all_lines)
         finish_btn = QPushButton("Finish Calibration")
+        finish_btn.setObjectName("primaryButton")
         finish_btn.clicked.connect(self._finish_calibration)
 
         side_panel = QVBoxLayout()
+        side_panel.setSpacing(10)
         side_panel.addWidget(QLabel("Calibration Lines:"))
         side_panel.addWidget(self.line_list)
         side_panel.addWidget(undo_btn)
@@ -198,6 +200,8 @@ class CalibrationView(QWidget):
         side_panel.addWidget(finish_btn)
 
         main_layout = QHBoxLayout(self)
+        main_layout.setContentsMargins(16, 16, 16, 16)
+        main_layout.setSpacing(16)
         main_layout.addWidget(self.view, stretch=3)
         side_container = QWidget()
         side_container.setLayout(side_panel)
