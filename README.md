@@ -13,9 +13,9 @@ Users select a video source, calibrate real-world reference lines directly on a 
 <!--
 Replace this section once your demo is recorded. Example embeds:
 
-[▶️ Watch the demo](link-to-video)
+▶️ [Watch the demo](github-attachment-link-here)  -- for MP4 uploaded via an Issue/PR
 
-or, for a GIF/screenshot preview:
+or, for a GIF:
 
 ![Demo](docs/demo.gif)
 -->
@@ -153,9 +153,15 @@ The detection model was trained using **[Roboflow](https://roboflow.com/)** for 
 
 ---
 
+## 🤖 Development Tools
+
+Portions of this project (debugging, documentation, and code review) were assisted using **Claude (Anthropic)** as a pair-programming and mentoring tool alongside human development by Shayaan and Denzel.
+
+---
+
 ## 👥 Authors
 
-Built by **Shayaan** — 3<sup>rd</sup> year Computer Science student at Queen's University Belfast — and **Denzel** as part of an AI/Vision internship project.
+Built by **Shayaan** — 3<sup>rd</sup> Computer Science students at Queen's University Belfast — and **Denzel** as part of an AI/Vision internship project.
 
 ---
 
