@@ -155,7 +155,7 @@ The detection model was trained using **[Roboflow](https://roboflow.com/)** for 
 
 ## 👥 Authors
 
-Built by **Shayaan** — 3<sup>rd<sup> year Computer Science student at Queen's University Belfast — and **Denzel** as part of an AI/Vision internship project.
+Built by **Shayaan** — 3<sup>rd</sup> year Computer Science student at Queen's University Belfast — and **Denzel** as part of an AI/Vision internship project.
 
 ---
 
