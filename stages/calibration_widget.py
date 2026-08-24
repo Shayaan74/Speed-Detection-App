@@ -3,16 +3,6 @@ calibration_widget.py
 Standalone-testable PySide6 widget for drawing calibration lines on a
 reference frame, with per-line color + transparency + real-world distance.
 
-Updated:
-- Distance input now supports meters OR centimeters via a unit dropdown.
-  Values are converted to meters internally before storage, so
-  video_worker.py's speed math never needs to know cm existed.
-- Crosshair cursor over the drawing area (precision drawing)
-- A dot appears on first click, and a live dashed preview line follows
-  the mouse until the second click finalizes it.
-
-Run this file directly to test it in isolation before wiring it into
-the main dashboard.
 """
 
 import sys

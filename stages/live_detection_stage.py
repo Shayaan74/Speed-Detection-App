@@ -4,7 +4,6 @@ Final pipeline stage: displays live YOLOv8+ByteTrack annotated video,
 logs over-limit speed events, and lets the user stop the feed cleanly
 to restart the whole flow.
 
-Requires: video_worker.py, calibration_widget.py in the same folder.
 """
 
 from typing import List, Optional, Union
@@ -16,8 +15,8 @@ from PySide6.QtWidgets import (
 from PySide6.QtGui import QPixmap, QImage
 from PySide6.QtCore import Qt, Signal
 
-from video_worker import VideoWorker
-from calibration_widget import LineData
+from .video_worker import VideoWorker
+from .calibration_widget import LineData
 
 
 class LiveDetectionStage(QWidget):

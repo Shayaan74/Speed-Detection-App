@@ -3,6 +3,7 @@ main_window.py
 Stitches SourceSelector -> CalibrationView -> LiveDetectionStage into a
 single flowing app using QStackedWidget, with a persistent header showing
 the user's current stage.
+
 """
 
 import sys
@@ -14,9 +15,9 @@ from PySide6.QtGui import QCloseEvent
 from PySide6.QtCore import Qt
 from typing import List
 
-from source_selector import SourceSelector
-from calibration_widget import CalibrationView, LineData
-from live_detection_stage import LiveDetectionStage
+from stages.source_selector import SourceSelector
+from stages.calibration_widget import CalibrationView, LineData
+from stages.live_detection_stage import LiveDetectionStage
 from styles import DARK_THEME
 
 
@@ -57,11 +58,10 @@ class MainWindow(QMainWindow):
         self.source_selector = SourceSelector()
         self.source_selector.frame_ready.connect(self._on_frame_ready)
 
-        # Stage 2: Calibration (created fresh each time, needs a frame)
+        # Stage 2: Calibration
         self.calibration_view = None
 
-        # Stage 3: Live detection (created once — loading YOLO is expensive,
-        # so we reuse this stage and just call start_processing/_stop_worker)
+        # Stage 3: Live detection
         self.live_detection_stage = LiveDetectionStage(
             model_path=model_path, speed_limit_kmh=speed_limit_kmh
         )

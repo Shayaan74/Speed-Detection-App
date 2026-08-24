@@ -3,7 +3,6 @@ source_selector.py
 PySide6 widget for selecting a camera or video file as the input source,
 grabbing a reference frame, and emitting it for calibration.
 
-Run this file directly to test it in isolation.
 """
 
 import sys

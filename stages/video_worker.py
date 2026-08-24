@@ -4,12 +4,6 @@ Background QThread that runs YOLOv8 + ByteTrack detection/tracking on a
 video source, checks vehicle crossings against calibration lines, computes
 speed (km/h), and emits fully-annotated frames back to the GUI thread.
 
-Updated:
-- Video files now play back at their native FPS instead of running as
-  fast as the GPU can process frames. Live cameras are untouched (they're
-  already real-time by nature).
-
-Requires: calibration_widget.py (for LineData) in the same folder.
 """
 
 import time
@@ -21,7 +15,7 @@ from typing import Dict, List, Optional, Tuple, Union
 from PySide6.QtCore import QThread, Signal
 from PySide6.QtGui import QImage
 
-from calibration_widget import LineData
+from .calibration_widget import LineData
 
 
 # ---------------------------------------------------------------------------
